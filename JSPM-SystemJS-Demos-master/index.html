@@ -1,0 +1,59 @@
+<html>
+
+<head>
+  <title>JSPM Demo</title>
+  <link rel="stylesheet" href="jspm_packages/github/twbs/bootstrap@3.3.6/css/bootstrap.css">
+  <style>
+    .snippet {
+      max-width: 500px;
+      display: block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    This page uses JSPM and System.js!!!
+    <table id="articles" border="1" class="table">
+      <thead>
+        <th>Title</th>
+        <th>A glimpse...</th>
+        <th>View Snippet</th>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="modal fade" id="snippetModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="jspm_packages/system.js"></script>
+  <script src="config.js"></script>
+
+  <!-- Remove this statement if you want to run the on the fly transpiler -->
+  <script src="build.js"></script>
+
+  <script>
+    System.import("scripts/display.js");
+  </script>
+</body>
+
+</html>

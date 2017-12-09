@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+      "outDir": "./wwwroot/dist/",
+      "noImplicitAny": false,
+      "noEmitOnError": true,
+      "removeComments": false,
+      "sourceMap": true,
+      "target": "es6",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "allowSyntheticDefaultImports": true
+    },
+    "files":[
+        "./node_modules/@types/mocha/index.d.ts",
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/node/index.d.ts"
+    ],
+    "include":[
+        "src/**/*.ts"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }

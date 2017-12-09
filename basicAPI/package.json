@@ -1,0 +1,28 @@
+{
+  "name": "basicapi",
+  "version": "1.0.0",
+  "description": "test basic api server",
+  "main": "server.js",
+  "scripts": {
+    "test": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blfuentes/basicAPI.git"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "blfuentes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blfuentes/basicAPI/issues"
+  },
+  "homepage": "https://github.com/blfuentes/basicAPI#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "request": "^2.81.0",
+    "underscore": "^1.8.3"
+  }
+}

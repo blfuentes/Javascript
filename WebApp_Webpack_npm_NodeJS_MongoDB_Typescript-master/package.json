@@ -1,0 +1,43 @@
+{
+  "name": "WebApp_Webpack_npm_NodeJS_MongoDB_Typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "tsc --watch & nodemon dist",
+    "test": "tsc && mocha dist/**/*.spec.js",
+    "lint": "eslint src --ext ts",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blfuentes/WebApp_Webpack_npm_NodeJS_MongoDB_Typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blfuentes/WebApp_Webpack_npm_NodeJS_MongoDB_Typescript/issues"
+  },
+  "homepage": "https://github.com/blfuentes/WebApp_Webpack_npm_NodeJS_MongoDB_Typescript#readme",
+  "devDependencies": {
+    "@types/node": "^8.0.53",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "@types/express": "^4.0.39",
+    "@types/mocha": "^2.2.44",
+    "eslint": "^4.12.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "express": "^4.16.2",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1",
+    "supertest": "^3.0.0",
+    "typescript-eslint-parser": "^9.0.1"
+  }
+}
