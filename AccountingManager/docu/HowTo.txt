@@ -1,0 +1,31 @@
+-Installing express:
+npm install express-generator -generator
+express
+npm install
+
+-Updating and replacing deprecated packages
+.replacing jade-->pug: https://pugjs.org/api/getting-started.html
+    _change package.json line to install "pug" package
+    _rename files in views from *.jade into *.pug
+    _in app.js change from 'app.set('view engine', 'jade');' to 'app.set('view engine', 'pug');'
+
+-Run application
+npm start
+
+-Installing MongoDB
+npm install mongodb
+
+-Create annotations route
+.app.js
+    var users = require('./routes/annotations');
+    app.use('/annotations', annotations);
+.add annotations.js file into routes
+.add annotations.pug in views folder
+
+-Create database logic
+.new file db.js
+.modify app.js to use the db logic
+    var db = require('./db');
+    db.connect('mongodb://localhost:27017/accountingmanager', function(err){ ...
+
+-

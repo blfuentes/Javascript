@@ -7,13 +7,11 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch via NPM",
-            "program": "${workspaceFolder}\\AccountingManager\\app.js",
-            "cwd": "${workspaceFolder}",
-            "runtimeExecutable": "npm",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/app.js",
             "runtimeArgs": [
-                "start"
-            ],
+                "inspect"
+            ]
         }
     ]
 }
