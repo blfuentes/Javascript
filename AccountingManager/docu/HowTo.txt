@@ -27,5 +27,5 @@ npm install mongodb
 .modify app.js to use the db logic
     var db = require('./db');
     db.connect('mongodb://localhost:27017/accountingmanager', function(err){ ...
-
+    ! important : https://stackoverflow.com/questions/43779323/typeerror-db-collection-is-not-a-function
 -

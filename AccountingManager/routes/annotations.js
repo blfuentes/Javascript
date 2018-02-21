@@ -12,8 +12,7 @@ router.get('/', function(req, res, next) {
 
 // functions
 function getAllAnnotations(){
-    // var annotations = db.get().collection('annotation');
-    var annotations = db.get().collection('annotation');
+    var annotations = db.getCollection('annotation');
     annotations.find().toArray(function(err, docs){
         return docs;
     });

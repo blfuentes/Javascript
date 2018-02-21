@@ -8,10 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/app.js",
-            "runtimeArgs": [
-                "inspect"
-            ]
+            "program": "${workspaceFolder}\\bin\\www"
         }
     ]
 }

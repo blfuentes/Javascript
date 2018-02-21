@@ -48,15 +48,17 @@ app.use(function(err, req, res, next) {
 });
 
 // Connect to Mongo on start
-db.connect('mongodb://localhost:27017/accountingmanager', function(err){
+db.connect('mongodb://localhost:27017/', 'accountingmanager', function(err){
   if(err){
     console.log('Unable to connect to Mongo.');
     process.exit(1);
   } else{
       console.log('Connected to Mongo...');
+      var tmp = db.getCollection('annotation').find()[0];
   }
 });
 
-module.exports = app;
-// module.exports = db;
+// var algo = db.get().collection('annotations');
+// console.log(annotations.length);
 
+module.exports = app;
