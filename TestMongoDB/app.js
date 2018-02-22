@@ -14,15 +14,31 @@ const collectionName = 'annotation';
 
 // Use connect method to connect to the server
 MongoClient.connect(url, function(err, client) {
-    assert.equal(null, err);
     console.log("Connected successfully to server");
+    assert.equal(null, err);
     const db = client.db(dbName);
+    // const collection  = client.db(dbName).collection(collectionName);
+    // const collection2 = client.db(dbName).collection('annotation');
     const collection = db.collection(collectionName);
-    console.log('first element: '+collection.find()[0]);
+    const collection2 = db.collection('annotation');
+    collection.find({}).toArray(function(err, items) {
+        assert.equal(null, err);
+        assert.equal(3, items.length);
+        console.log('first element: '+ items[0].name);
 
-    collection.insertOne({name:"test", type: 2, date: new Date(), amount: 10}, function(err, r){
-        client.close();
+        // client.close();
     });
+
+    collection2.find({}).toArray(function(err, items) {
+        assert.equal(null, err);
+        assert.equal(3, items.length);
+        console.log('second element: '+ items[1].name);
+        // client.close();
+    });
+
+    // collection.insertOne({name:"test", type: 2, date: new Date(), amount: 10}, function(err, r){
+    //     client.close();
+    // });
 
     // createCapped(db, function() {
     //     var collection2 = db.collection("myCollection");
