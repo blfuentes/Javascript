@@ -1,0 +1,12 @@
+{
+  "name": "accountingmanager",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "assert": "^1.4.1",
+    "debug": "~2.6.9",
+    "inspect": "~0.0.2",
+    "mongodb": "^3.0.2",
+    "mongoose": "~5.0.6"
+  }
+}
