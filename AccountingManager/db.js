@@ -35,8 +35,11 @@ exports.close = function(done){
     }
 }
 
-exports.getCollection = function(collectionName){
+exports.getCollection = function(collectionName, next){
     if(state.db){
-        return state._embeddedDb.collection(collectionName);
+        state._embeddedDb.collection(collectionName).find({}).toArray(function(err, items){
+            if(err) throw err;
+            next(items);
+        });
     }
 }

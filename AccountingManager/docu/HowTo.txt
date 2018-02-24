@@ -28,4 +28,4 @@ npm install mongodb
     var db = require('./db');
     db.connect('mongodb://localhost:27017/accountingmanager', function(err){ ...
     ! important : https://stackoverflow.com/questions/43779323/typeerror-db-collection-is-not-a-function
--
+-Add functions with callback to get data from routes files.

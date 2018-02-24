@@ -54,7 +54,6 @@ db.connect('mongodb://localhost:27017/', 'accountingmanager', function(err){
     process.exit(1);
   } else{
       console.log('Connected to Mongo...');
-      var tmp = db.getCollection('annotation').find()[0];
   }
 });
 
