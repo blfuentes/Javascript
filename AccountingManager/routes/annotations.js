@@ -5,9 +5,9 @@ var db = require('../db');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    var tmpCollection = getAllAnnotations();
-  
-    res.render('annotation', { title: 'Annotations', count: tmpCollection.length });
+    db.getCollection('annotation', function(items){
+        res.render('annotation', { title: 'Annotations', count: items.length });
+      });
 });
 
 // functions
