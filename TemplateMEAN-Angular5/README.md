@@ -1,10 +1,11 @@
 # TemplateMEANAngular5
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
+Adapted following https://www.djamware.com/post/5a0673c880aca7739224ee21/mean-stack-angular-5-crud-web-application-example 
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
