@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Item List</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let element of elements">
+        <td>{{ element.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
