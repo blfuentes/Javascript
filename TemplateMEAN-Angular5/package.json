@@ -29,8 +29,8 @@
     "inspect": "~0.0.2",
     "mongodb": "^3.0.5",
     "rxjs": "^5.5.8",
-    "serve-favicon": "^2.4.5",
-    "zone.js": "^0.8.20"
+    "serve-favicon": "^2.5.0",
+    "zone.js": "^0.8.25"
   },
   "devDependencies": {
     "@angular/cli": "~1.7.3",
@@ -38,7 +38,7 @@
     "@angular/language-service": "^5.2.9",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "~9.6.0",
+    "@types/node": "~9.6.2",
     "codelyzer": "^4.2.1",
     "jasmine-core": "~3.1.0",
     "jasmine-spec-reporter": "~4.2.1",
