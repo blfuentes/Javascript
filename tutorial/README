@@ -1,0 +1,6 @@
+ISSUE:
+request to https://registry.npmjs.org/sorted-object failed, reason: self signed certificate in certificate chain
+SOLUTION:
+https://github.com/npm/npm/issues/7519
+"npm config set strict-ssl false" 
+
