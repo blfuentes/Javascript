@@ -11,6 +11,7 @@
     "express": "~4.16.0",
     "file-system": "^2.2.2",
     "http-errors": "~1.6.2",
+    "mongoose": "^5.2.1",
     "morgan": "~1.9.0",
     "nodemon": "^1.17.5",
     "pug": "^2.0.3"

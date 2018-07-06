@@ -1,13 +1,33 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-
-var app = express();
+// require section
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const logger = require('morgan');
+const mongoose = require('mongoose');
 
 // Require file system module
-var fs = require('file-system');
+const fs = require('file-system');
+
+// create express app
+const app = new express();
+
+// connect to mongodb
+mongoose.connect('mongodb://localhost:27017/express_app', function() {
+  console.log('Connection has been made');
+})
+.catch(err => {
+  console.error('App starting error:', err.stack);
+  process.exit(1);
+});
+
+// set up configuration !!! IMPORTANT BEFORE DEFINING ROUTES !!!
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Include controllers
 fs.readdirSync('controllers').forEach(function (file) {
@@ -20,12 +40,6 @@ fs.readdirSync('controllers').forEach(function (file) {
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
