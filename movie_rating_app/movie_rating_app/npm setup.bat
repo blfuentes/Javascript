@@ -1,0 +1,1 @@
+npm i -g npm-check-updates && ncu && ncu -a
