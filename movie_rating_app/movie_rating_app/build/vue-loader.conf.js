@@ -11,6 +11,9 @@ module.exports = {
     sourceMap: sourceMapEnabled,
     extract: isProduction
   }),
+  configureWebpack: {
+    devtool: 'source-map'
+  },
   cssSourceMap: sourceMapEnabled,
   cacheBusting: config.dev.cacheBusting,
   transformToRequire: {
