@@ -6,11 +6,13 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 import BootstrapVue from 'bootstrap-vue';
 import Vue from 'vue';
 import Vuetify from 'vuetify';
+import VuewSwal from 'vue-swal';
 import App from './App';
 import router from './router';
 
 Vue.use(BootstrapVue);
 Vue.use(Vuetify);
+Vue.use(VuewSwal);
 
 Vue.config.productionTip = false;
 
