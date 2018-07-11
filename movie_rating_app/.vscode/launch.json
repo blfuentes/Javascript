@@ -2,9 +2,29 @@
     "version": "0.2.0",
     "configurations": [
       {
+        "name": "Launch webpack",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder}/movie_rating_app/node_modules/webpack/bin/webpack.js",
+        "args":[
+          "--inline", "--progress", "--config", "${workspaceFolder}/movie_rating_app/build/webpack.dev.conf.js"
+        ]
+      },
+      {
+        "name": "Launch server",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}/movie_rating_app",
+        "runtimeExecutable": "npm",
+        "runtimeArgs": [
+            "run-script", "debug-server"
+        ],
+        "port": 9229
+      },
+      {
+        "name": "vuejs: chrome",
         "type": "chrome",
         "request": "launch",
-        "name": "vuejs: chrome",
         "url": "http://localhost:8080",
         "webRoot": "${workspaceFolder}/movie_rating_app/src",
         "breakOnLoad": true,
